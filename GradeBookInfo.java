@@ -18,7 +18,7 @@ public class GradeBookInfo
             
             for(int j = 1;j < 5;j++)
             {
-                System.out.println("Enter Student " + i + " subject " 
+                System.out.println("Enter a Student's name " + i + " subject " 
                                    + j +" score :");
                 scores1[i - 1][j - 1] = keyboard.nextDouble();
             }
