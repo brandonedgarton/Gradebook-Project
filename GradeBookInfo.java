@@ -16,7 +16,7 @@ public class GradeBookInfo
             temp = keyboard.next();
             gBook.setName(i, temp);
             
-            for(int j = 1;j < 2;j++)
+            for(int j = 1;j < 5;j++)
             {
                 System.out.println("Enter Student " + i + " subject " 
                                    + j +" score :");
