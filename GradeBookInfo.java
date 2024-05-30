@@ -10,13 +10,13 @@ public class GradeBookInfo
         double[][] scores1 = new double[5][4];
         GradeBook gBook = new GradeBook();
         
-        for(int i = 1;i < 6;i++)
+        for(int i = 1;i < 3;i++)
         {
             System.out.println("Enter Student Name " + i + " :");
             temp = keyboard.next();
             gBook.setName(i, temp);
             
-            for(int j = 1;j < 5;j++)
+            for(int j = 1;j < 2;j++)
             {
                 System.out.println("Enter Student " + i + " subject " 
                                    + j +" score :");
