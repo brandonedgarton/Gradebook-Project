@@ -4,34 +4,40 @@ public class GradeBookInfo
 {
     public static void main(String[] args)
     {
-        String temp;
 
         Scanner keyboard = new Scanner(System.in);
         double[][] scores1 = new double[5][4];
         GradeBook gBook = new GradeBook();
         
-        for(int i = 1;i < 6;i++)
+        for(int i = 1;i < 5;i++)
         {
-            System.out.println("Enter Student Name " + i + " :");
-            temp = keyboard.next();
-            gBook.setName(i, temp);
+            System.out.println("Enter Student Name " + (i) + " :");
+            String name = keyboard.next();
+            gBook.setName(i, name);
             
-            for(int j = 1;j < 5;j++)
+            for(int j = 0;j < 4;j++)
             {
-                System.out.println("Enter a Student's Name " + i + " subject " 
-                                   + j +" score :");
-                scores1[i - 1][j - 1] = keyboard.nextDouble();
+                System.out.println("Enter " + name + "'s subject " 
+                                   + (j + 1) + " score :");
+                scores1[i][j] = keyboard.nextDouble();
             }
             
-            gBook.setScores(1, scores1[i - 1]);
+            gBook.setScores(i, scores1[i]);
         }
         
-        for(int i = 1; i < 6; i++)
+        for(int i = 0; i < 5; i++)
         {
-            System.out.println(gBook.getName(i) + "'s average is "
+            String studentName = gBook.getName(i);
+            if(studentName != null && !studentName.isEmpty()){
+                
+                System.out.println(gBook.getName(i) + "'s average is "
                                + gBook.getAverage(i) + " with a grade of " 
-                               + gBook.determineGrade(gBook.getAverage(i)));
+                               + gBook.getLetterGrade(i));
+            }
+        
         }
+
+        keyboard.close();
     }
 
 }
