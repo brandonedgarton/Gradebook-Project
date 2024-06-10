@@ -1,10 +1,10 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class GradeBookInfo 
 {
     public static void main(String[] args)
     {
-
         Scanner keyboard = new Scanner(System.in);
         double[][] scores1 = new double[5][4];
         GradeBook gBook = new GradeBook();
@@ -37,6 +37,15 @@ public class GradeBookInfo
         
         }
 
+        System.out.println("Enter the threshold score to list students above it: ");
+        double threshold = keyboard.nextDouble();
+        List<String> studentsAboveThreshold = gBook.getStudentsAboveThreshold(threshold);
+
+        System.out.println("Students with average score above " + threshold + ":");
+        for(String student : studentsAboveThreshold){
+            System.out.println(student);
+        }
+        
         keyboard.close();
     }
 

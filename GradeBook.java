@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class GradeBook
 {
     private final int NUM_STUDENTS = 5;
@@ -56,6 +60,17 @@ public class GradeBook
         {
             return 'E';
         }
+    }
+
+    public List<String> getStudentsAboveThreshold(double threshold){
+        List<String> students = new ArrayList<>();
+
+        for(int i = 0; i < names.length; i++){
+            if(getAverage(i) > threshold){
+                students.add(names[i]);
+            }
+        }
+        return students;
     }
 
 }
