@@ -45,7 +45,16 @@ public class GradeBookInfo
         for(String student : studentsAboveThreshold){
             System.out.println(student);
         }
-        
+
+        System.out.println("Enter the grade to list students with that grade: ");
+        char grade = keyboard.next().charAt(0);
+        List<String> studentsWithGrade = gBook.getStudentsWithGrade(grade);
+
+        System.out.println("Students with grade " + grade + ":");
+        for(String student : studentsWithGrade){
+            System.out.println(student);
+        }
+
         keyboard.close();
     }
 
