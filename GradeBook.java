@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-
+//This is my GradeBook Project
 public class GradeBook
 {
     private final int NUM_STUDENTS = 5;
