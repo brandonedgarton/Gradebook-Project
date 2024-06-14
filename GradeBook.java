@@ -73,4 +73,15 @@ public class GradeBook
         return students;
     }
 
+    public List<String> getStudentsWithGrade(char grade){
+        List<String> students = new ArrayList<>();
+
+        for(int i = 0; i < names.length; i++){
+            if(getLetterGrade(i) == grade){
+                students.add(names[i]);
+            }
+        }
+        return students;
+    }
+
 }
